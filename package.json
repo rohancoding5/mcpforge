@@ -1,0 +1,36 @@
+{
+  "name": "mcpforge",
+  "version": "0.1.0",
+  "description": "Generates a working MCP server from an OpenAPI spec or a file of TypeScript functions, with typed tool arguments pulled straight from the source.",
+  "type": "module",
+  "bin": {
+    "mcpforge": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "npm run build && node --test dist/__tests__/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openapi",
+    "codegen",
+    "cli",
+    "ai-tools"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "typescript": "^5.9.3"
+  }
+}
